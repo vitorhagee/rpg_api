@@ -6,10 +6,13 @@ datasource db {
   provider = "sqlite"
 }
 
-model Character {
+model Item {
   id        Int    @id @default(autoincrement())
   name      String
-  class     String
-  height    Int
-  race      String
+  type     String
+  weight    Int
+  rarity    String
+  price     Int
+  description  String
+  createAt     DateTime @default(now())
 }
